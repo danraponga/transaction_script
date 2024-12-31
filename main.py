@@ -49,7 +49,8 @@ async def process_data(pool) -> None:
                 "factory_number": factory_number,
                 "sales": {
                     "code": row["id"],
-                    row["payment_type"]: row["value"],
+                    "payment_type": row["payment_type"],
+                    "cash": row["value"],
                     "created_at": now.strftime("%Y-%m-%dT%H:%M:%S")
                 }
             })
